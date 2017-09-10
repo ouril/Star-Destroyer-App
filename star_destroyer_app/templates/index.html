@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html ng-app="StarApp">
+  <head>
+    <meta charset="utf-8">
+  <!--  <link href="css/main.css" rel="stylesheet" /> -->
+  <!--<script type="text/javascript" src="js/angular-resource.js"></script>-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+
+    <!--<script type="text/javascript" src="js/angular.min.js"></script>-->
+    <script type="text/javascript" src="{% static 'js/angular-resource.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/angular-resource.min.js' %}"></script>
+    <script tyte="text/javascript" src="{% static 'js/controllers/conyroller.js' %}"></script>
+    </script>
+  </head>
+  {% verbatim %}
+  <body ng-controller='StarCtr'>
+    <p>{{title}}</p>
+    <hr>
+    <div ng-repeat="ship in ships">
+      <p>Name of ship: {{ship.name }}       capitan: {{ship.capitane}}         type:{{ship.typeof}}</p>
+
+      <hr>
+   {% endverbatim %}
+
+  </body>
+</html>
